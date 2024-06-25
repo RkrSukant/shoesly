@@ -28,3 +28,11 @@ Color addWhite(Color color, double whitePercentage) {
 
   return Color.fromARGB(color.alpha, red, green, blue);
 }
+
+Widget addVerticalSpace(double height) {
+  return SizedBox(height: height);
+}
+
+Widget addHorizontalSpace(double width) {
+  return SizedBox(width: width);
+}

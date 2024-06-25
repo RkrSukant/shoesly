@@ -1,0 +1,1 @@
+enum IconLocation { start, end }

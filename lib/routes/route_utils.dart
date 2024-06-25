@@ -95,3 +95,11 @@ extension ContextExtensions on BuildContext {
     // return paths.contains(context.router.current);
   }
 }
+replaceRouteTo(path, context) {
+  try {
+    final router = AutoRouter.of(context);
+    router.replaceNamed(path);
+  } catch (e) {
+    print(e);
+  }
+}

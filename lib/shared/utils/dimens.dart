@@ -1,11 +1,14 @@
 class Dimens {
   static const double spacing_216 = 216.0;
   static const double spacing_200 = 200.0;
+  static const double spacing_150 = 150.0;
+  static const double spacing_128 = 128.0;
   static const double spacing_100 = 100.0;
   static const double spacing_145 = 145.0;
   static const double spacing_140 = 140.0;
   static const double spacing_123 = 123.0;
   static const double spacing_80 = 80.0;
+  static const double spacing_75 = 75.0;
   static const double spacing_70 = 70.0;
   static const double spacing_64 = 64.0;
   static const double spacing_56 = 56.0;
@@ -14,12 +17,14 @@ class Dimens {
   static const double spacing_40 = 40.0;
   static const double spacing_35 = 35.0;
   static const double spacing_32 = 32.0;
+  static const double spacing_30 = 30.0;
   static const double spacing_28 = 28.0;
   static const double spacing_24 = 24.0;
   static const double spacing_22 = 22.0;
   static const double spacing_20 = 20.0;
   static const double spacing_18 = 18.0;
   static const double spacing_16 = 16.0;
+  static const double spacing_15 = 15.0;
   static const double spacing_14 = 14.0;
   static const double spacing_13 = 13.0;
   static const double spacing_12 = 12.0;
@@ -35,23 +40,13 @@ class Dimens {
   static const double spacing_0_5 = 0.5;
   static const double spacing_0 = 0.0;
 
-  static const double textSize_40 = 40.0;
-  static const double textSize_34 = 34.0;
-  static const double textSize_32 = 34.0;
-  static const double textSize_28 = 28.0;
-  static const double textSize_26 = 26.0;
+  static const double textSize_48 = 48.0;
+  static const double textSize_36 = 36.0;
+  static const double textSize_30 = 30.0;
   static const double textSize_24 = 24.0;
   static const double textSize_20 = 20.0;
-  static const double textSize_19 = 19.0;
-  static const double textSize_18 = 18.0;
   static const double textSize_16 = 16.0;
-  static const double textSize_15 = 15.0;
   static const double textSize_14 = 14.0;
-  static const double textSize_13 = 13.0;
   static const double textSize_12 = 12;
-  static const double textSize_11 = 11.0;
   static const double textSize_10 = 10.0;
-  static const double textSize_6 = 6.0;
-  static const double textSize_8 = 8.0;
-  static const double textSize_7 = 7.0;
 }

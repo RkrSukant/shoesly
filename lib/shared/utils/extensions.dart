@@ -17,15 +17,15 @@ extension Iterables<E> on Iterable<E> {
 //Extension on BuildContext to showToast messages
 extension ContextExtensions on BuildContext {
   void showToast(String title, ToastType type) {
-    Color activeColor = AppColors.black;
+    Color activeColor = AppColors.neutral500_101010;
     if (type == ToastType.success) {
-      activeColor = AppColors.green_0CCB6B;
+      activeColor = AppColors.success500_89D860;
     } else if (type == ToastType.info) {
-      activeColor = AppColors.black_494A50;
+      activeColor = AppColors.info500_00BAFB;
     } else if (type == ToastType.warning) {
-      activeColor = AppColors.orange_FF962E;
+      activeColor = AppColors.warning500_F1E43A;
     } else {
-      activeColor = AppColors.red_C51523;
+      activeColor = AppColors.error500_FF7144;
     }
     var fToast = FToast();
     fToast.init(this);
@@ -55,7 +55,7 @@ extension ContextExtensions on BuildContext {
                 Flexible(
                   child: Text(
                     title,
-                    style: text_1F2024_14_regular_w400, //todo change
+                    style: text_body200_w400_14, //todo change
                     textAlign: TextAlign.center,
                   ),
                 ),
