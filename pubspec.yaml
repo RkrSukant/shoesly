@@ -56,6 +56,7 @@ dependencies:
   connectivity_plus: ^3.0.6
   flutter_layout_grid: ^2.0.7
   carousel_slider: ^4.2.1
+  pluralize: ^0.0.8
 
 flutter_icons:
   android: true

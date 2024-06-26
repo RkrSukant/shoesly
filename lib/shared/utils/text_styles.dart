@@ -34,6 +34,11 @@ const TextStyle text_neutral300_headline600_w700_20 = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: Dimens.textSize_20);
 
+const TextStyle text_headline500_w700_18 = TextStyle(
+    color: AppColors.neutral500_101010,
+    fontWeight: FontWeight.w700,
+    fontSize: Dimens.textSize_18);
+
 const TextStyle text_headline400_w600_16 = TextStyle(
     color: AppColors.neutral500_101010,
     fontWeight: FontWeight.w600,

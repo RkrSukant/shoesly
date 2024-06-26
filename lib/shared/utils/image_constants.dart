@@ -19,4 +19,6 @@ class ImageConstants{
   static const String icMinus = "assets/drawable/ic_minus.png";
   static const String icPlus = "assets/drawable/ic_plus.png";
   static const String icTickCircle = "assets/drawable/ic_tick_circle.png";
+  static const String icDelete = "assets/drawable/ic_delete.png";
+  static const String icAngleArrowRight = "assets/drawable/ic_angle_arrow_right.png";
 }

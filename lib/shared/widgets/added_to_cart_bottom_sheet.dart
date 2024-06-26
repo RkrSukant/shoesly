@@ -60,13 +60,11 @@ void addedToCartBottomSheet(
                             context.goBackUntil(const DiscoverRoute());
                           }),
                       PrimaryButton(
-                        text: Strings.addToCart,
+                        text: Strings.toCart,
                         onPress: () {
                           Navigator.pop(context);
-                          // context.replaceRoute(const CartRoute());
-                          //todo to nav to cart
+                          context.replaceRoute(const CartRoute());
                         },
-                        hasPadding: false,
                       )
                     ],
                   ),

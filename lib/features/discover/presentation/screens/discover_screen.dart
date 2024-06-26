@@ -59,12 +59,10 @@ class _DiscoverScreenState extends ConsumerState<DiscoverScreen> {
                       Strings.discover,
                       style: text_headline700_w700_30,
                     ),
-                    GestureDetector(
-                        onTap: () {},
-                        child: const Padding(
-                          padding: EdgeInsets.all(Dimens.spacing_4),
-                          child: CartWidget(),
-                        ))
+                    const Padding(
+                      padding: EdgeInsets.all(Dimens.spacing_8),
+                      child: CartWidget(),
+                    )
                   ],
                 ),
               ),

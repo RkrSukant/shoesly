@@ -3,6 +3,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sukant_shoesly/features/product_detail/data/model/color_model.dart';
+import 'package:sukant_shoesly/routes/app_routes.gr.dart';
+import 'package:sukant_shoesly/routes/route_utils.dart';
 import 'package:sukant_shoesly/shared/models/ReviewListItemModel.dart';
 import 'package:sukant_shoesly/shared/utils/colors.dart';
 import 'package:sukant_shoesly/shared/utils/dimens.dart';
@@ -66,7 +68,8 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                   addVerticalSpace(Dimens.spacing_30),
                   _productDescWidget(),
                   addVerticalSpace(Dimens.spacing_30),
-                  _reviewListWidget()
+                  _reviewListWidget(),
+                  addVerticalSpace(Dimens.spacing_100),
                 ],
               ),
             ),
@@ -329,7 +332,10 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
           },
         ),
         addVerticalSpace(Dimens.spacing_30),
-        SecondaryButton(text: Strings.seeAllReviews.toUpperCase(), onPress: () {})
+        SecondaryButton(text: Strings.seeAllReviews.toUpperCase(), onPress: () {
+          debugPrint("JEREEEE----------->");
+          context.routePush(const ProductReviewRoute());
+        })
       ],
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:pluralize/pluralize.dart';
 import 'package:sukant_shoesly/shared/utils/colors.dart';
 import 'package:sukant_shoesly/shared/utils/dimens.dart';
 import 'package:sukant_shoesly/shared/utils/enums/toast_type_enum.dart';
@@ -10,8 +11,8 @@ import 'package:sukant_shoesly/shared/utils/utils.dart';
 extension Iterables<E> on Iterable<E> {
   Map<K, List<E>> groupBy<K>(K Function(E) keyFunction) => fold(
       <K, List<E>>{},
-          (Map<K, List<E>> map, E element) =>
-      map..putIfAbsent(keyFunction(element), () => <E>[]).add(element));
+      (Map<K, List<E>> map, E element) =>
+          map..putIfAbsent(keyFunction(element), () => <E>[]).add(element));
 }
 
 //Extension on BuildContext to showToast messages
@@ -66,7 +67,6 @@ extension ContextExtensions on BuildContext {
   }
 }
 
-
 extension StringExtensions on String {
   String toCapitalCase() {
     if (isEmpty) {
@@ -79,5 +79,17 @@ extension StringExtensions on String {
       }
       return word[0].toUpperCase() + word.substring(1).toLowerCase();
     }).join(' ');
+  }
+
+  String pluralize(int length) {
+    return length > 1 ? Pluralize().plural(this) : this;
+  }
+
+  String pluralizeWithLength(int length) {
+    return "$length ${length > 1 ? Pluralize().plural(this) : this}";
+  }
+
+  String pluralizeWithDouble(double length) {
+    return "${length.toStringAsFixed(2)} ${length > 1 ? Pluralize().plural(this) : this}";
   }
 }

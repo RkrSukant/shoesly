@@ -32,5 +32,17 @@ class AppRouter extends $AppRouter {
         path:RoutePaths.productDetail,
         page:ProductDetailRoute.page
     ),
+    AutoRoute(
+        path:RoutePaths.productReview,
+        page:ProductReviewRoute.page
+    ),
+    AutoRoute(
+        path:RoutePaths.cart,
+        page:CartRoute.page
+    ),
+    AutoRoute(
+        path:RoutePaths.orderSummary,
+        page:OrderSummaryRoute.page
+    ),
   ];
 }

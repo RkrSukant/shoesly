@@ -6,4 +6,5 @@ class RoutePaths {
   static const String filter = "/filter";
   static const String cart = "/cart";
   static const String orderSummary = "/orderSummary";
+  static const String productReview = "/productReview";
 }
