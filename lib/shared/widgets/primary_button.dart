@@ -9,9 +9,10 @@ class PrimaryButton extends StatelessWidget {
   final String text;
   final Color buttonColor;
   final bool disable;
-  final bool hasIcon;
   final IconLocation iconLocation;
   final String icon;
+  final bool iconNotification;
+  final bool hasPadding;
 
   final VoidCallback onPress;
 
@@ -20,9 +21,10 @@ class PrimaryButton extends StatelessWidget {
       required this.text,
       this.buttonColor = AppColors.neutral500_101010,
       this.disable = false,
-      this.hasIcon = false,
       this.icon = "",
-      this.iconLocation = IconLocation.start,
+      this.hasPadding = true,
+      this.iconLocation = IconLocation.none,
+      this.iconNotification = false,
       required this.onPress});
 
   @override
@@ -34,38 +36,62 @@ class PrimaryButton extends StatelessWidget {
           backgroundColor: disable ? AppColors.grey_989898 : buttonColor,
           elevation: Dimens.spacing_0,
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(Dimens.spacing_12)),
+              borderRadius: BorderRadius.circular(Dimens.spacing_50)),
         ),
         onPressed: disable ? null : onPress,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: Dimens.spacing_20),
+          padding: (hasPadding)? const EdgeInsets.symmetric(horizontal: Dimens.spacing_10) : EdgeInsets.zero,
           child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Visibility(
-                  visible: (hasIcon && iconLocation == IconLocation.start),
-                  child: Image.asset(
-                    icon,
-                    height: Dimens.spacing_20,
-                  )),
+                  visible: (iconLocation == IconLocation.start), child: _iconWidget()),
               Visibility(
-                  visible: (hasIcon && iconLocation == IconLocation.start),
+                  visible: (iconLocation == IconLocation.start),
                   child: addHorizontalSpace(Dimens.spacing_8)),
               Text(
-                text,
+                text.toUpperCase(),
                 style: text_neutral0_headline300_w700_14,
               ),
               Visibility(
-                  visible: (hasIcon && iconLocation == IconLocation.end),
+                  visible: (iconLocation == IconLocation.end),
                   child: addHorizontalSpace(Dimens.spacing_8)),
               Visibility(
-                  visible: (hasIcon && iconLocation == IconLocation.end),
-                  child: Image.asset(
-                    icon,
-                    height: Dimens.spacing_20,
-                  )),
+                  visible: (iconLocation == IconLocation.end), child: _iconWidget()),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _iconWidget() {
+    return SizedBox(
+      height: Dimens.spacing_20,
+      width: Dimens.spacing_20,
+      child: Stack(
+        children: [
+          Image.asset(
+            icon,
+          ),
+          Visibility(
+            visible: iconNotification,
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Padding(
+                padding: const EdgeInsets.only(top: Dimens.spacing_4),
+                child: Container(
+                  height: Dimens.spacing_8,
+                  width: Dimens.spacing_8,
+                  decoration: const BoxDecoration(
+                      color: AppColors.error500_FF7144,
+                      borderRadius: BorderRadius.all(Radius.circular(Dimens.spacing_10))),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

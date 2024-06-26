@@ -5,7 +5,7 @@ class AppColors {
   const AppColors();
 
   static const primaryColor = const Color.fromRGBO(16, 16, 16, 1.0);
-  static const backgroundColor = const Color.fromRGBO(255, 255, 255, 1.0);
+  static const backgroundColor = const Color.fromRGBO(253, 253, 253, 1.0);
   static const secondaryColor = const Color.fromRGBO(242, 122, 71, 1.0);
 
   //Primary Neutral Palette
@@ -111,5 +111,6 @@ class AppColors {
   static const grey_F3F3F3 = const Color.fromRGBO(243, 243, 243, 1.0);
   static const grey_989898 = const Color.fromRGBO(152, 152, 152, 1.0);
   static const grey_767676 = const Color.fromRGBO(118, 118, 118, 1.0);
+  static const yellow_FCD240 = const Color.fromRGBO(252, 210, 64, 1.0);
 
 }

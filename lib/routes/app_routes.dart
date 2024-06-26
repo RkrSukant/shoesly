@@ -28,5 +28,9 @@ class AppRouter extends $AppRouter {
         path:RoutePaths.internetErrorScreen,
         page:InternetErrorRoute.page
     ),
+    AutoRoute(
+        path:RoutePaths.productDetail,
+        page:ProductDetailRoute.page
+    ),
   ];
 }

@@ -88,3 +88,18 @@ const TextStyle text_neutral0_headline300_w700_14 = TextStyle(
     color: AppColors.neutral0_FFFFFF,
     fontWeight: FontWeight.w700,
     fontSize: Dimens.textSize_14);
+
+const TextStyle text_neutral300_body100_w400_12 = TextStyle(
+    color: AppColors.neutral300_B7B7B7,
+    fontWeight: FontWeight.w400,
+    fontSize: Dimens.textSize_12);
+
+const TextStyle text_neutral400_body200_w400_14 = TextStyle(
+    color: AppColors.neutral400_6F6F6F,
+    fontWeight: FontWeight.w400,
+    fontSize: Dimens.textSize_14);
+
+const TextStyle text_neutral400_headline300_w700_14 = TextStyle(
+    color: AppColors.neutral400_6F6F6F,
+    fontWeight: FontWeight.w700,
+    fontSize: Dimens.textSize_14);

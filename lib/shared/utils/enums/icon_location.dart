@@ -1,1 +1,1 @@
-enum IconLocation { start, end }
+enum IconLocation { start, end, none }

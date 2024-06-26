@@ -4,6 +4,8 @@ class ImageConstants{
   static const String icNoInternet = "assets/drawable/ic_no_internet.png";
   static const String icCart = "assets/drawable/ic_cart.png";
   static const String icHeart = "assets/drawable/ic_heart.png";
+  static const String icFilter = "assets/drawable/ic_filter.png";
+  static const String icArrowLeft = "assets/drawable/ic_arrow_left.png";
   static const String icStar= "assets/drawable/ic_star.png";
   static const String icNike = "assets/drawable/ic_nike.png";
   static const String icAdidas = "assets/drawable/ic_adidas.png";
@@ -11,4 +13,10 @@ class ImageConstants{
   static const String icJordan = "assets/drawable/ic_jordan.png";
   static const String icPuma = "assets/drawable/ic_puma.png";
   static const String icReebok = "assets/drawable/ic_reebok.png";
+  static const String icAvatarPlaceholder = "assets/drawable/ic_avatar_placeholder.jpg";
+  static const String icTick = "assets/drawable/ic_tick.png";
+  static const String icClose = "assets/drawable/ic_close.png";
+  static const String icMinus = "assets/drawable/ic_minus.png";
+  static const String icPlus = "assets/drawable/ic_plus.png";
+  static const String icTickCircle = "assets/drawable/ic_tick_circle.png";
 }
